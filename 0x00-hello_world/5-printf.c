@@ -2,7 +2,8 @@
 
 /** 
   * main - prints using printf
-  * Returns: always 0
+  *
+  * Return: 0 always 
   */
 
 int main(void)
