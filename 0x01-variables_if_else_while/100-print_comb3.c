@@ -1,6 +1,6 @@
 #include <stdio.h>
  /**
-   * main - two digits
+   * main - print two digits combination
    *
    * Return: always 0
    */
@@ -18,8 +18,11 @@ int main(void)
 			{
 				putchar(i + '0');
 				putchar(j + '0');
-				putchar(',');
-				putchar(' ');
+				if (i + j != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 
 		}
