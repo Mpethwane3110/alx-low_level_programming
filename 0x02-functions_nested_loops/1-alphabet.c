@@ -1,13 +1,13 @@
 #include "main.h"
 /**
-  * print function - prints alpabets in lower case
-  *
-  * Return: 0
-  */
+ * print_alphabet - entry point
+ * Return: 0
+ */
 
 void print_alphabet(void)
 {
 	char c = 'a';
+
 	while (c <= 'z')
 	{
 		_putchar(c);
