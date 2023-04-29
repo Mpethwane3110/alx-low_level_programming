@@ -2,8 +2,8 @@
 #include "lists.h"
 
 /**
-  *free_list - function that frees a list 
-  *@h: list to be freed 
+  *free_list - function that frees a list
+  *@h: list to be freed
   *return:
   */
 
