@@ -5,8 +5,8 @@
 
 /**
   *free_listint - free the lined list
-  *@h: head node of the list
-  *return: void
+  *@head: head node of the list
+  *Return: void
   */
 
 void free_listint(listint_t *head)
