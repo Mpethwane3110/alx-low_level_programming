@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * print_list - prints all the elements of a listintt
+ * print_listint - prints all the elements of a listintt
  *
  * @h: linked list of listint_t
  *
