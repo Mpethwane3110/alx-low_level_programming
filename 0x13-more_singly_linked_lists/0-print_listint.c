@@ -4,8 +4,8 @@
 
 /**
  * print_list - prints all the elements of a listintt
- * 
- * @h: linked list of listint_t 
+ *
+ * @h: linked list of listint_t
  *
  * Return: number of nodes
  */
