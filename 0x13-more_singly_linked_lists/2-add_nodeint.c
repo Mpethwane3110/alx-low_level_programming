@@ -3,23 +3,22 @@
 #include "lists.h"
 
 /**
-  *add_node - adds new node at the head
-  *@h: pointer to head
+  *add_nodeint - adds new node at the head
+  *@head: pointer to head
   *@n: insert new node
-  *return: ptr or NULL
+  *Return: ptr or NULL
   */
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new;
 
-	if (ptr == NULL)
-		_putchar("%c", o);
-	new_node = ptr;
-	ptr = ptr->next;
-		new_node->data = val;
-		new_node->next = head;
-		head = new_node;
+	new = malloc(sizeof(listint_t));
+		if (!new)
+			return (NULL);
 
-			return (new);
+	new->n = n;
+	new->next = *head;
+	*head = new;
+	return (new);
 }
