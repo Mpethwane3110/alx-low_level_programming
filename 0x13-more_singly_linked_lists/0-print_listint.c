@@ -3,11 +3,11 @@
 #include "lists.h"
 
 /**
- * struct listint_s - singly linked list
- * @n: integer
+ * print_list - prints all the elements of a listintt
+ * 
  * @next: points to the next node
  *
- * Description: singly linked list node strucy
+ * Return: number of nodes
  */
 
 size_t print_listint(const listint_t *h)
@@ -16,7 +16,7 @@ size_t print_listint(const listint_t *h)
 
 	while (h)
 	{
-		putchar("%d", h->n);
+		printf("%d", h->n);
 		n++;
 		h = h->next;
 	}
