@@ -4,11 +4,10 @@
 #include "lists.h"
 
 /**
- * struct listint_s - singly linked list
- * @n: integer
- * @next: points to the next node
+ * listint_len - returns the number of elements in a linked list
+ * @h: ;inked list to traverse
  *
- * return: number of nodes
+ * Return: number of nodes
  *
  */
 
