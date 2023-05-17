@@ -8,18 +8,14 @@
   *Return:
   *close_file - closes file descriptor
   *@fd: file descriptor
-  *main - copies file content to another
+  *Main - copies file content to another
   *@argc: arguments in the program
   *@argv: array of pointers to the argument
-  *Return: 0 if successful
-  *Description:incorrect count - exit(97)
+  *description:incorrect count - exit(97)
   *file_from cannot ne read or does not exist exit (98)
   *file_to file could not be created or wr exit (99)
   *file_to or file_from cannot be closed exit (100)
   **/
-
-char *create_buffer(char *file);
-void close_file(int fd);
 
 char *create_buffer(char *file)
 {
@@ -29,15 +25,31 @@ char *create_buffer(char *file)
 
 	if (buffer == NULL)
 	{
-		dprint(STDERR_FILENO, "ERROR, cant write to %s\n", file)
+		dprintf(STDERR_FILENO, "ERROR, cant write to %s\n", file);
 			exit(99);
 	}
-	else
 		return (buffer);
 }
-int main(int argc, char *argv[])
+
+void close_file(int fd)
 {
-	int from, to, read, write;
+	int c;
+
+	c = close(fd);
+
+	if (c == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+
+int main(int argc, char *argv[])
+/*
+   *main - copies file contents to another
+   */
+{
+	int from, to, r, w;
 	char *buffer;
 
 	if (argc != 3)
@@ -80,18 +92,3 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-
-void close_file(int fd)
-{
-	int cl;
-
-	cl = close(fd);
-
-	if
-		(cl == -1);
-	{
-		dprint(STDERR_FILENO, "ERROR cant close fd %d\n", fd);
-		exit 100;
-	}
-}
-
